@@ -32,7 +32,7 @@ class CollectionHandler {
 
         for (String text : arguments) {
             if (text.isEmpty())
-                throw new InvalidArgumentsException("Invalid arguments, parameter cannot be blank");
+                throw new InvalidArgumentsException("Invalid arguments, parameter cannot be blank ");
         }
 
         LinkedList<String> result = new LinkedList<>();
