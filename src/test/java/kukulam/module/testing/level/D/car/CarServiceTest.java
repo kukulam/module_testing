@@ -4,16 +4,13 @@ import kukulam.module.testing.level.D.person.PersonServiceTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.*;
-
 /*
     test with mock (self implementation)
  */
 class CarServiceTest {
 
     /**
-     * TODO: write test for method {@link CarService#find(int)}
+     * TODO: write test for method {@link CarService#findByAge(int)}
      * 1. initialize/clean {@link CarService} and mock of {@link CarRepository}
      *    with annotations: {@link BeforeEach}, {@link AfterEach}.
      * 2. For mock creation use {@link org.mockito.Mockito#mock(Class)}.
@@ -37,4 +34,8 @@ class CarServiceTest {
     void shouldAddCarWithCorrectParams() {
 
     }
+
+    /**
+     * TODO EXTRA: write test for method {@link CarService#findByName(String)}
+     */
 }

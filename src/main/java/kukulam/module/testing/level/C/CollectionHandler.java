@@ -42,6 +42,20 @@ class CollectionHandler {
         return result;
     }
 
+    /**
+     * Create new collection with common objects from collection a and b.
+     * @return Collection with strings.
+     * @throws InvalidArgumentsException when one of given collection is null.
+     */
+    Collection<String> common(Collection<String> a, Collection<String> b) throws InvalidArgumentsException {
+        if (a == null || b == null)
+            throw new InvalidArgumentsException("Invalid arguments, params cannot be null");
+
+        LinkedList<String> result = new LinkedList<>(a);
+        result.retainAll(b);
+
+        return result;
+    }
 
     static class InvalidArgumentsException extends Exception {
         InvalidArgumentsException(String message) {

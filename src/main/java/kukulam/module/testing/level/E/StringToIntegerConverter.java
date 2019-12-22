@@ -1,5 +1,5 @@
 package kukulam.module.testing.level.E;
 
-interface StringToIntegerConverter {
+public interface StringToIntegerConverter {
     int convert(String number);
 }

@@ -121,4 +121,20 @@ class IntegerCalculatorTest {
 
     }
 
+    /**
+     * TODO EXTRA: test a * a, write test for {@link IntegerCalculator#power(int)}
+     * In section 'then', please use assertions:
+     * {@link Assertions#assertThat(int)}
+     * {@link AbstractIntegerAssert#isEqualTo(int)}
+     */
+    @Test
+    void shouldCalculateSquareNumber() {
+        // given
+
+        // when
+
+        // then
+
+    }
+
 }
