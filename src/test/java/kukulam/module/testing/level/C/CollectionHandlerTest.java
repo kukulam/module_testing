@@ -132,4 +132,8 @@ class CollectionHandlerTest {
 
         // then
     }
+
+    /**
+     * TODO EXTRA: write all possible tests for {@link CollectionHandler#common(Collection, Collection)}
+     */
 }

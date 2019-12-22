@@ -5,4 +5,7 @@ package kukulam.module.testing.level.E;
  */
 class StringToIntegerConverterTest {
 
+    /**
+     *  TODO EXTRA: implement and write test in TDD manner for {@link StringToIntegerConverter}
+     */
 }

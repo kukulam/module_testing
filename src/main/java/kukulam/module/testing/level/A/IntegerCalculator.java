@@ -28,4 +28,13 @@ class IntegerCalculator {
     int multiply(int a, int b) {
         return  a * b;
     }
+
+    /**
+     * Square number.
+     * Example 10 * 10 = 100
+     * @return result of: a * a
+     */
+    int power(int a) {
+        return a * a;
+    }
 }

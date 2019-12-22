@@ -10,7 +10,7 @@ class CarService {
         this.repository = repository;
     }
 
-    List<Car> find(int withAge) {
+    List<Car> findByAge(int withAge) {
         return repository.find()
                 .stream()
                 .filter(car -> car.getAge() == withAge)
@@ -20,5 +20,12 @@ class CarService {
     void add(String name, int age) {
         Car car = new Car(name, age);
         repository.add(car);
+    }
+
+    List<Car> findByName(String name) {
+        return repository.find()
+                .stream()
+                .filter(car -> car.getName().equals(name))
+                .collect(Collectors.toList());
     }
 }
