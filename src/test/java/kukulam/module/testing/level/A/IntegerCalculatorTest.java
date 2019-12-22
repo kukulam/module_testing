@@ -16,7 +16,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 /*
     simple test, assertEquals, parametrized test
  */
-class IntegerCalculatorTest {
+public class IntegerCalculatorTest {
 
     /**
      * Example test with usage of {@link Assertions#assertThat}.
