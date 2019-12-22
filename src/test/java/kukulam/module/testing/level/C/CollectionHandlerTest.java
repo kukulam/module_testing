@@ -39,7 +39,10 @@ class CollectionHandlerTest {
     }
 
     /**
-     * Example of assertions.
+     * Example of assertions. Usage of:
+     * {@link Assertions#assertThat(int)}
+     * {@link IterableAssert#isNull()}
+     * {@link IterableAssert#containsExactly(Object[])}
      */
     @Test
     void shouldMergeTwoCollectionsWithCorrectOrder() throws Exception {
@@ -65,6 +68,7 @@ class CollectionHandlerTest {
      * 3. In section 'then', please use assertions:
      * {@link Assertions#assertThat(int)}
      * {@link IterableAssert#isNull()}
+     * Hint: look at {@link #shouldMergeTwoCollectionsWithCorrectOrder}
      */
     @Test
     void test1() {
@@ -83,6 +87,7 @@ class CollectionHandlerTest {
      * {@link Assertions#assertThat(int)}
      * {@link IterableAssert#isNotNull()}
      * {@link IterableAssert#containsExactly(Object[])}
+     * Hint: look at {@link #shouldMergeTwoCollectionsWithCorrectOrder}
      */
     @Test
     void test2() {
@@ -94,7 +99,7 @@ class CollectionHandlerTest {
     }
 
     /**
-     * Example how to assert exceptions.
+     * Example how to assert exceptions, usage of {@link Assertions#assertThatThrownBy(ThrowableAssert.ThrowingCallable)}.
      */
     @Test
     void shouldThrowExceptionWhenOneOfTheParametersIsNull() {
@@ -117,6 +122,7 @@ class CollectionHandlerTest {
      * {@link Assertions#assertThatThrownBy(ThrowableAssert.ThrowingCallable)}
      * {@link AbstractThrowableAssert#isInstanceOf(Class)}
      * {@link AbstractThrowableAssert#hasMessage(String)}
+     * Hint: look at {@link #shouldThrowExceptionWhenOneOfTheParametersIsNull}
      */
     @Test
     void test3() {

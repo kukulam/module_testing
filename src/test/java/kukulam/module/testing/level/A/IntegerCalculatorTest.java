@@ -19,7 +19,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class IntegerCalculatorTest {
 
     /**
-     * Example.
+     * Example test with usage of {@link Assertions#assertThat}.
      */
     @Test
     void shouldAddTwoIntegersCorrectly() {
@@ -65,6 +65,7 @@ class IntegerCalculatorTest {
      * In section 'then', please use assertions:
      * {@link Assertions#assertThat(int)}
      * {@link AbstractIntegerAssert#isEqualTo(int)}
+     * Hint: look at {@link #shouldSubtractTwoIntegersCorrectly}
      */
     @Test
     void shouldMultiplyTwoIntegersCorrectly() {
