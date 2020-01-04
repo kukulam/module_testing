@@ -24,6 +24,14 @@ class CarServiceTest {
     }
 
     /**
+     * TODO: write the same test for method {@link CarService#findByAge(int)}, but in section then use own assertion
+     * Hint: look at {@link PersonServiceTest#shouldFindAllPersonOlderThanGivenAgeWithOwnAssertion()}
+     */
+    void shouldFindCarsWithGivenAgeWithOwnAssertion() {
+
+    }
+
+    /**
      * TODO: write test for method {@link CarService#add(String, int)}
      * 1. initialize/clean {@link CarService} and mock of {@link CarRepository}
      *    with annotations: {@link BeforeEach}, {@link AfterEach}.
