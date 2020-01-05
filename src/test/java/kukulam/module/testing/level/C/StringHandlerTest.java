@@ -65,12 +65,12 @@ class StringHandlerTest {
      * Hint: look at {@link #shouldMergeTwoArraysWithCorrectOrder}
      */
     @Test
-    void test1() {
-        // given
-
+    void shouldReturnNullWhenParametersAreNotProvided() {
         // when
+        String result = stringHandler.create();
 
         // then
+        assertThat(result).isNull();
     }
 
     /**
@@ -84,12 +84,19 @@ class StringHandlerTest {
      * Hint: look at {@link #shouldMergeTwoArraysWithCorrectOrder}
      */
     @Test
-    void test2() {
+    void shouldJoinStringsCorrectly() {
         // given
+        String a = "A-";
+        String b = "B-";
+        String c = "C";
+        String expectedResult = "A-B-C";
 
         // when
+        String result = stringHandler.create(a, b, c);
 
         // then
+        assertThat(result).isNotNull();
+        assertThat(result).isEqualTo(expectedResult);
     }
 
     /**
@@ -103,15 +110,57 @@ class StringHandlerTest {
      * Hint: look at {@link #shouldMergeTwoArraysWithCorrectOrder}
      */
     @Test
-    void test3() {
+    void shouldJoinTwoArraysCorrectly() {
         // given
+        String[] letters = new String[] { "a", "b", "c"};
+        String[] upperCaseLetters = new String[] { "X", "Y" };
+        String[] expectedResult = new String[] { "a", "b", "c", "X", "Y" };
 
         // when
+        String[] result = stringHandler.add(letters, upperCaseLetters);
 
         // then
+        assertThat(result).isNotNull();
+        assertThat(result).containsExactly(expectedResult);
     }
 
     /**
      * TODO EXTRA: write all possible tests for {@link StringHandler#convert(String, boolean)}}
      */
+    @Test
+    void shouldReturnEmptyArrayWhenTextIsNotProvided() {
+        // when
+        String[] result = stringHandler.convert(null, true);
+
+        // then
+        assertThat(result).isEmpty();
+    }
+
+    @Test
+    void shouldReturnArrayWithLowerCaseLetters() {
+        // given
+        String givenText = "TeXt";
+        boolean withUpperCase = false;
+        String[] expectedResult = new String[] { "t", "e", "x", "t" };
+
+        // when
+        String[] result = stringHandler.convert(givenText, withUpperCase);
+
+        // then
+        assertThat(result).isEqualTo(expectedResult);
+    }
+
+    @Test
+    void shouldReturnArrayWithUpperCaseLetters() {
+        // given
+        String givenText = "TeXt";
+        boolean withUpperCase = true;
+        String[] expectedResult = new String[] { "T", "E", "X", "T" };
+
+        // when
+        String[] result = stringHandler.convert(givenText, withUpperCase);
+
+        // then
+        assertThat(result).isEqualTo(expectedResult);
+    }
 }

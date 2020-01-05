@@ -48,6 +48,7 @@ public class IntegerCalculatorTest {
         // given
         int a = 10;
         int b = 5;
+        int expectedResult = 5;
 
         IntegerCalculator calculator = new IntegerCalculator();
 
@@ -55,7 +56,7 @@ public class IntegerCalculatorTest {
         int result = calculator.subtract(a, b);
 
         // then
-
+        assertThat(result).isEqualTo(expectedResult);
     }
 
     /**
@@ -69,11 +70,17 @@ public class IntegerCalculatorTest {
      */
     @Test
     void shouldMultiplyTwoIntegersCorrectly() {
-        // given
+        int a = 10;
+        int b = 5;
+        int expectedResult = 50;
+
+        IntegerCalculator calculator = new IntegerCalculator();
 
         // when
+        int result = calculator.multiply(a, b);
 
         // then
+        assertThat(result).isEqualTo(expectedResult);
     }
 
     /**
@@ -84,12 +91,16 @@ public class IntegerCalculatorTest {
      */
     @Test
     void shouldCalculateSquareNumber() {
-        // given
+        int a = 10;
+        int expectedResult = 100;
+
+        IntegerCalculator calculator = new IntegerCalculator();
 
         // when
+        int result = calculator.power(a);
 
         // then
-
+        assertThat(result).isEqualTo(expectedResult);
     }
 
     /**
@@ -125,16 +136,26 @@ public class IntegerCalculatorTest {
      * but REMEMBER to rename method and change value of arguments.
      * 3. Write test, like in {@link #shouldAddTwoIntegersCorrectlyParameterizedTest}.
      */
-    @Disabled
     @ParameterizedTest()
     @MethodSource("subtractTwoIntegersArguments")
     void shouldSubtractTwoIntegersCorrectlyParameterizedTest(int a, int b, int expectedResult) {
         // given
+        IntegerCalculator calculator = new IntegerCalculator();
 
         // when
+        int result = calculator.subtract(a, b);
 
         // then
+        assertThat(result).isEqualTo(expectedResult);
+    }
 
+    static Stream<Arguments> subtractTwoIntegersArguments() {
+        return Stream.of(
+                //        a,   b,   expectedResult
+                arguments(10,  5,   5),
+                arguments(1,   2,   -1),
+                arguments(3,   6,   -3)
+        );
     }
 
 }
