@@ -14,7 +14,7 @@ import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 /*
-    simple test, assertEquals, parametrized test
+    simple tests, isEqualTo, parametrized test
  */
 public class IntegerCalculatorTest {
 
@@ -38,7 +38,7 @@ public class IntegerCalculatorTest {
     }
 
     /**
-     * TODO: test a - b
+     * TODO: test a - b, write test for {@link IntegerCalculator#subtract(int, int)}
      * In section 'then', please use assertions:
      * {@link Assertions#assertThat(int)}
      * {@link AbstractIntegerAssert#isEqualTo(int)}
@@ -59,7 +59,7 @@ public class IntegerCalculatorTest {
     }
 
     /**
-     * TODO: test a * b
+     * TODO: test a * b, write test for {@link IntegerCalculator#multiply(int, int)}
      * In section 'given' prepare two integers and instance of class {@link IntegerCalculator}.
      * In section 'when' use {@link IntegerCalculator#multiply(int, int)} to get result of multiplication.
      * In section 'then', please use assertions:
@@ -74,6 +74,22 @@ public class IntegerCalculatorTest {
         // when
 
         // then
+    }
+
+    /**
+     * TODO EXTRA: test a * a, write test for {@link IntegerCalculator#power(int)}
+     * In section 'then', please use assertions:
+     * {@link Assertions#assertThat(int)}
+     * {@link AbstractIntegerAssert#isEqualTo(int)}
+     */
+    @Test
+    void shouldCalculateSquareNumber() {
+        // given
+
+        // when
+
+        // then
+
     }
 
     /**
@@ -102,8 +118,8 @@ public class IntegerCalculatorTest {
     }
 
     /**
-     * TODO EXTRA: parametrized test a * b
-     * 1. Remove annotation @Disabled (line 105)
+     * TODO EXTRA: parametrized test a - b, write test for {@link IntegerCalculator#subtract(int, int)}
+     * 1. Remove annotation @Disabled
      * 2. Create static method with the name 'subtractTwoIntegersArguments' and with return type Stream<Arguments>.
      * You can copy it from method {@link IntegerCalculatorTest#addTwoIntegersArguments()},
      * but REMEMBER to rename method and change value of arguments.
@@ -113,22 +129,6 @@ public class IntegerCalculatorTest {
     @ParameterizedTest()
     @MethodSource("subtractTwoIntegersArguments")
     void shouldSubtractTwoIntegersCorrectlyParameterizedTest(int a, int b, int expectedResult) {
-        // given
-
-        // when
-
-        // then
-
-    }
-
-    /**
-     * TODO EXTRA: test a * a, write test for {@link IntegerCalculator#power(int)}
-     * In section 'then', please use assertions:
-     * {@link Assertions#assertThat(int)}
-     * {@link AbstractIntegerAssert#isEqualTo(int)}
-     */
-    @Test
-    void shouldCalculateSquareNumber() {
         // given
 
         // when

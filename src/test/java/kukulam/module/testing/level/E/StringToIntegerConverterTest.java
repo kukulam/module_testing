@@ -1,7 +1,7 @@
 package kukulam.module.testing.level.E;
 
 /*
-    tdd example
+    tdd
  */
 class StringToIntegerConverterTest {
 
