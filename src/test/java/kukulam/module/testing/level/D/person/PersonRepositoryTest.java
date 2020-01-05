@@ -29,11 +29,11 @@ public class PersonRepositoryTest {
         personRepository.add(givenPerson);
 
         // and
-        Person[] foundedPeople = personRepository.findAll();
+        Person[] foundPeople = personRepository.findAll();
 
         // then
-        assertThat(foundedPeople.length).isEqualTo(1);
-        assertThat(foundedPeople).containsExactly(givenPerson);
+        assertThat(foundPeople.length).isEqualTo(1);
+        assertThat(foundPeople).containsExactly(givenPerson);
     }
 
     @Test
@@ -51,11 +51,11 @@ public class PersonRepositoryTest {
         personRepository.add(givenPerson3);
 
         // and
-        Person[] foundedPeople = personRepository.findByAge(age);
+        Person[] foundPeople = personRepository.findByAge(age);
 
         // then
-        assertThat(foundedPeople.length).isEqualTo(2);
-        assertThat(foundedPeople).containsExactly(givenPerson1, givenPerson2);
+        assertThat(foundPeople.length).isEqualTo(2);
+        assertThat(foundPeople).containsExactly(givenPerson1, givenPerson2);
     }
 
     @Test
@@ -73,9 +73,9 @@ public class PersonRepositoryTest {
         personRepository.add(givenPerson3);
 
         // and
-        Person[] foundedPeople = personRepository.findByAge(age);
+        Person[] foundPeople = personRepository.findByAge(age);
 
         // then
-        PersonsAgeAssert.assertThat(foundedPeople).hasAge(40);
+        PersonsAgeAssert.assertThat(foundPeople).hasAge(40);
     }
 }
