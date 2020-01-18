@@ -76,6 +76,6 @@ public class PersonRepositoryTest {
         Person[] foundPeople = personRepository.findByAge(age);
 
         // then
-        PersonsAgeAssert.assertThat(foundPeople).hasAge(40);
+        PeopleAgeAssert.assertThat(foundPeople).hasAge(40);
     }
 }
