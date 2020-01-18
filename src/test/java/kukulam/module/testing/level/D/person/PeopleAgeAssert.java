@@ -2,13 +2,13 @@ package kukulam.module.testing.level.D.person;
 
 import org.assertj.core.api.AbstractAssert;
 
-public class PersonsAgeAssert extends AbstractAssert<PersonsAgeAssert, Person[]> {
-    public PersonsAgeAssert(Person[] people) {
-        super(people, PersonsAgeAssert.class);
+public class PeopleAgeAssert extends AbstractAssert<PeopleAgeAssert, Person[]> {
+    public PeopleAgeAssert(Person[] people) {
+        super(people, PeopleAgeAssert.class);
     }
 
-    public static PersonsAgeAssert assertThat(Person[] actual) {
-        return new PersonsAgeAssert(actual);
+    public static PeopleAgeAssert assertThat(Person[] actual) {
+        return new PeopleAgeAssert(actual);
     }
 
     public void hasAge(int age) {

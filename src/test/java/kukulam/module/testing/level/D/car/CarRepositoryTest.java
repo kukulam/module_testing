@@ -1,7 +1,7 @@
 package kukulam.module.testing.level.D.car;
 
 import kukulam.module.testing.level.D.person.PersonRepositoryTest;
-import kukulam.module.testing.level.D.person.PersonsAgeAssert;
+import kukulam.module.testing.level.D.person.PeopleAgeAssert;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -98,7 +98,7 @@ class CarRepositoryTest {
      * 4. In section 'then', please use your assertion
      * Hint: look at
      * {@link PersonRepositoryTest#shouldFindPeopleByAgeWithOwnAssertion()}
-     * {@link PersonsAgeAssert#hasAge(int)}
+     * {@link PeopleAgeAssert#hasAge(int)}
      * Remember about annotation {@link Test} before test method
      */
     @Test
