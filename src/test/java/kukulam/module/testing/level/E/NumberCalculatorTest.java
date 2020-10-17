@@ -15,7 +15,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
  */
 class NumberCalculatorTest {
 
-    private final NumberCalculatorImplementation calculator = new NumberCalculatorImplementation();
+    private final NumberCalculator calculator = new NumberCalculator();
 
     /**
      * TODO: implement and write test in TDD manner for {@link NumberCalculator}

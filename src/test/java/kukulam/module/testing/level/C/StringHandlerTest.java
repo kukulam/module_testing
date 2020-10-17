@@ -56,27 +56,29 @@ class StringHandlerTest {
     }
 
     /**
-     * TODO: write test for method {@link StringHandler#create(String...)} when parameters are not provided
+     * TODO: write test for method {@link StringHandler#create(String[])} when parameters are not provided
      * 1. Rename test1 to be more descriptive.
-     * 2. Test method {@link StringHandler#create(String...)} without parameters.
+     * 2. Test method {@link StringHandler#create(String[])} without parameters.
      * 3. In section 'then', please use assertions:
      * {@link Assertions#assertThat(String)}
-     * {@link AbstractCharSequenceAssert#isNull()}
+     * {@link AbstractCharSequenceAssert#isEqualTo(Object)}
      * Hint: look at {@link #shouldMergeTwoArraysWithCorrectOrder}
      */
     @Test
-    void shouldReturnNullWhenParametersAreNotProvided() {
+    void shouldReturnEmptyStringWhenParametersAreNotProvided() {
+        // given
+        String expectedResult = "";
         // when
-        String result = stringHandler.create();
+        String result = stringHandler.create(new String[]{});
 
         // then
-        assertThat(result).isNull();
+        assertThat(result).isEqualTo(expectedResult);
     }
 
     /**
-     * TODO: write test for method {@link StringHandler#create(String...)} when parameters are provided
+     * TODO: write test for method {@link StringHandler#create(String[])} when parameters are provided
      * 1. Rename test2 to be more descriptive.
-     * 2. Test method {@link StringHandler#create(String...)} with at least 3 parameters.
+     * 2. Test method {@link StringHandler#create(String[])} with at least 3 parameters.
      * 3. In section 'then', please use assertions:
      * {@link Assertions#assertThat(String)}
      * {@link AbstractCharSequenceAssert#isNotNull()}
@@ -92,7 +94,7 @@ class StringHandlerTest {
         String expectedResult = "A-B-C";
 
         // when
-        String result = stringHandler.create(a, b, c);
+        String result = stringHandler.create(new String[] { a, b, c });
 
         // then
         assertThat(result).isNotNull();

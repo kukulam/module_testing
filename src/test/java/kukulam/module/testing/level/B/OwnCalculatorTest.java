@@ -1,6 +1,5 @@
 package kukulam.module.testing.level.B;
 
-import kukulam.module.testing.level.A.IntegerCalculatorTest;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -24,7 +23,7 @@ class OwnCalculatorTest {
         int c = 2;
         int expectedResult = 17;
 
-        OwnCalculator calculator = new OwnCalculatorImplementation();
+        OwnCalculator calculator = new OwnCalculator();
 
         // when
         int result = calculator.add(a, b ,c);
