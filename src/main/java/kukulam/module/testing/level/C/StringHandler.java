@@ -24,7 +24,7 @@ class StringHandler {
      * Create string from given objects.
      * @return String or null when arguments are not provided.
      */
-    String create(String... arguments) {
+    String create(String[] arguments) {
         if (arguments.length == 0)
             return null;
 

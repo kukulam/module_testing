@@ -56,9 +56,9 @@ class StringHandlerTest {
     }
 
     /**
-     * TODO: write test for method {@link StringHandler#create(String...)} when parameters are not provided
+     * TODO: write test for method {@link StringHandler#create(String[])} when parameters are not provided
      * 1. Rename test1 to be more descriptive.
-     * 2. Test method {@link StringHandler#create(String...)} without parameters.
+     * 2. Test method {@link StringHandler#create(String[])} without parameters.
      * 3. In section 'then', please use assertions:
      * {@link Assertions#assertThat(String)}
      * {@link AbstractCharSequenceAssert#isNull()}
@@ -74,9 +74,9 @@ class StringHandlerTest {
     }
 
     /**
-     * TODO: write test for method {@link StringHandler#create(String...)} when parameters are provided
+     * TODO: write test for method {@link StringHandler#create(String[])} when parameters are provided
      * 1. Rename test2 to be more descriptive.
-     * 2. Test method {@link StringHandler#create(String...)} with at least 3 parameters.
+     * 2. Test method {@link StringHandler#create(String[])} with at least 3 parameters.
      * 3. In section 'then', please use assertions:
      * {@link Assertions#assertThat(String)}
      * {@link AbstractCharSequenceAssert#isNotNull()}
