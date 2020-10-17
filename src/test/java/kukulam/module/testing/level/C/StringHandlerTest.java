@@ -61,7 +61,7 @@ class StringHandlerTest {
      * 2. Test method {@link StringHandler#create(String[])} without parameters.
      * 3. In section 'then', please use assertions:
      * {@link Assertions#assertThat(String)}
-     * {@link AbstractCharSequenceAssert#isNull()}
+     * {@link AbstractCharSequenceAssert#isEqualTo(Object)} ()}
      * Hint: look at {@link #shouldMergeTwoArraysWithCorrectOrder}
      */
     @Test
